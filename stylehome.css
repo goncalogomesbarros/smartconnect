@@ -1,0 +1,23 @@
+#divmodificarpessoa {
+  background-color: yellow;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  display: none;
+}
+
+#divmodificarpessoaum {
+  background-color: white;
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  z-index: 15;
+  top: 25%;
+  left: 25%;
+  display: none;
+}

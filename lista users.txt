@@ -1,0 +1,48 @@
+
+<!--        corpo DIV LISTA usuarios----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="listausers">
+	<section class="titlistausers">
+		Lista de Utilizadores
+	</section>
+	<section class="txtlistausers">
+		<p>Bem-vindo à lista de utilizaores da plantaforma SmartConnect!
+		Aqui pode ver e controlar a conta de cada pessoa com acesso à SmartConnect.</p>
+		<p>Selecione o utilizador para ver detalhes mais promenorizados. Clique em "Editar" para alterar os parametros da conta.</p>
+	</section> 
+
+
+
+
+
+	
+
+
+
+	<section class="tabelalistausers">
+		<br>
+		<section class="linhatabhead">
+			<section class="colunaa" id="nomecompum">Nome Completo</section>
+			<section class="colunaa" id="tipouserum">Tipo de Utilizador</section>
+			<section class="colunaa" id="loginum">Login</section>
+			<section class="colunaa" id="pginicialum">Página Inicial</section>
+		</section>
+
+			<section class="linhatabela">
+				<section class="colunab" id="nomecompdois">Nome Completo</section>
+				<section class="colunab" id="tipouserdois">Tipo de Utilizador</section>
+				<section class="colunab" id="logindois">Login</section>
+				<section class="colunab" id="pginicialdois">Página Inicial</section>
+			</section>
+
+	</section>
+
+
+
+
+
+
+
+
+
+</div>
+<!--     FIM DIV LISTA USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->

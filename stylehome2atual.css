@@ -1,0 +1,802 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(MYRIADPRO-SEMIBOLD.OTF);
+}
+ 
+@font-face {
+    font-family: mySecondFont;
+    src: url(MYRIADPRO-REGULAR.OTF);
+}
+
+@font-face {
+    font-family: myTirdFont;
+    src: url(MyriadPro-Light.otf);
+}
+
+body {
+    /*font-family: myFirstFont;*/
+    font-family: mySecondFont;
+    /*font-family: myTirdFont;*/
+    background-color: #eceff1;
+}
+
+.menulateral {
+    height: 100%;
+    width: 240px;
+    /*border: 1px solid red;*/
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: #262f3d;
+    color: #c1c3c4;
+}
+ 
+.logocimonav {
+    width: 240px;
+    height: 50px;
+    /*border: 1px solid green;*/
+    /*border-bottom: 1px solid white;*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #262f3d;
+    color: white;
+    /*font-family: mySecondFont;*/
+    font-size: 20px;
+}
+
+.logocimonavimg {
+    position: relative;
+    top: 11px;
+    left: 15px;
+}
+
+.asmartconnect {
+    position: fixed;
+    top: 13px;
+    left: 50px;
+}
+
+.segundoespaconav {
+    width: 200px;
+    height: 50px;
+    /*border: 1px solid white;*/
+    /*border-bottom: 1px #39424d;*/
+    border: 0px solid pink;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 15px;
+    top: 51px;
+    background-color: #262f3d;
+    vertical-align: middle;
+
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+
+
+    color: #55c3f5;
+
+}
+
+
+
+
+
+/*
+
+.segundoespaconav {
+    /* color:*/
+/*}*/
+
+.imghomeum {
+    display: block;
+}
+
+.imghomedois {
+    display: block;
+}
+
+
+
+
+.bordadebaixo {
+    width: 240px;
+    height: 50px;
+    /*border: 1px solid white;*/
+    /*border-bottom: 1px #39424d;*/
+    border: 0px solid pink;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 0px;
+    top: 51px;
+    background-color: #262f3d;
+    vertical-align: middle;
+
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+
+
+}
+
+.dirsegundoespaconav {
+    width: 50px;
+    left: 188px;
+    height: 35px;
+    border-left: 1px solid blue;
+    /*border: 1px solid blue;*/
+    position: fixed;
+    top: 58px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+    text-align: center;
+}
+
+.developnav {
+    width: 240px;
+    height: 205px;
+    /*border: 1px solid yellow;*/
+    /*border-bottom: 1px solid white;*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 0;
+    top: 102px;
+    background-color: #19222a;
+
+}
+
+.titledevelopnav {
+    width: 240px;
+    height: 53px;
+    /*border: 1px solid pink;*/
+    position: relative;
+    left: 15px;
+    top: 0px;
+    color: white;
+
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+
+}
+
+.menubotaonav {
+    width: 240px;
+    height: 28px;
+    border: 0px solid pink;
+    position: relative;
+    left: 30px;
+    top: 0px;
+    vertical-align: middle;
+    align-items: center;
+
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+
+}
+
+.developnavdois {
+    width: 240px;
+    height: 180px;
+    /*border: 1px solid yellow;*/
+    /*border-bottom: 1px solid white;*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 0;
+    top: 308px;
+    background-color: #19222a;
+}
+
+.developnavtres {
+    width: 240px;
+    height: 350px;
+    /*border: 1px solid yellow;*/
+    /*border-bottom: 1px solid white;*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 0;
+    top: 489px;
+    background-color: #19222a;
+}
+
+
+
+/*--------------------------------------------------*/
+
+
+
+
+
+
+
+.cabecalho {
+    width: 100%;
+    height: 102px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: #209AE4;
+    z-index: -1;
+}
+
+.nomecabecalho {
+    border: 0px solid red;
+    top: 13px;
+    position: fixed;
+    left: 250px;
+    /*color: white;*/
+    color: rgba(255, 255, 255, 0.9);
+    font-family: mySecondFont;
+    font-size: 17px;
+}
+
+.botsair {
+    border: 0px solid red;
+    top: 13px;
+    position: fixed;
+    right: 20px;
+    /*color: white;*/
+    color: rgba(255, 255, 255, 0.9);
+    font-family: mySecondFont;
+    font-size: 17px;
+}
+
+
+
+.conteudoprincipal {
+    position: fixed;
+    top: 102px;
+    left: 240px;
+    border: 0px solid red;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.conteudoprincipal {
+    background-color: #eceff1;
+}
+
+#listausers {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+.humlistausers {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.tabelalistausers {
+    position: relative;
+    left: 20px;
+}
+
+.tablelistausers {
+    width: 96%;
+    text-align: left;
+}
+
+#criarusers {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+#modificarusers {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+#zonasdecontrolo {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+#homepage {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: block;
+}
+
+#dispositivosdiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+#luzesdiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+#sensoresdiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+#alarmediv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+#camarasdiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+
+
+/*----------------------*/
+
+
+
+
+.titlistausers {
+    border: 0xpx solid red;
+    width: 500px;
+    height: 55px;
+    font-family: myFirstFont;
+    font-size: 40px;
+    top: 10px;
+    left: 20px;
+    position: relative;
+}
+
+.txtlistausers {
+    border: 0px solid red;
+    position: relative;
+    left: 21px;
+    width: 80%;
+}
+
+.tabelalistausers {
+    border: 0px solid green;
+    width: 97%;
+    left: 21px;
+    position: relative;
+    height: 500px;
+}
+
+.linhatabhead {
+    border: 0px solid blue;
+    background-color: #6c7ae0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 50px;
+    width: 10%;
+    vertical-align: middle;
+    display: table-cell;
+
+}
+
+.colunaa {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-family: myFirstFont;
+    font-size: 20px;
+}
+
+#nomecompum {
+    left: 40px;
+    position: relative;
+}
+
+#tipouserum {
+    left: 350px;
+    position: relative;
+}
+
+#loginum {
+    left: 650px;
+    position: relative;
+}
+
+#pginicialum {
+    left: 970px;
+    position: relative;
+}
+
+/*----------------------------------*/
+.linhatabela {
+    border-bottom: 1px solid #3e4244;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.colunab {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+#nomecompdois {
+    left: 40px;
+    position: relative;
+    width: 350px;
+    max-width: 350px;
+    border: 0px solid red;
+}
+
+#tipouserdois {
+    left: 140px;
+    width: 350px;
+    max-width: 350px;
+    border: 0px solid red;
+    position: relative;
+}
+
+#logindois {
+    left: 245px;
+    width: 250px;
+    max-width: 350px;
+    border: 0px solid red;
+    position: relative;
+}
+
+#pginicialdois {
+    left: 360px;
+    width: 100px;
+    max-width: 350px;
+    border: 0px solid red;
+    position: relative;
+}
+
+.modusertot {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: table;
+    z-index: 0;
+}
+
+#voltaraonormalumdois {
+    display: none;
+}
+
+.moduserbox {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+#voltaraonormaldoisdois {
+    display: none;
+    border: 1px solid red;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 550px;
+    border: 0px solid red;
+    background-color: white;
+    text-align: center;
+    z-index: 9;
+}
+
+#voltaraonormaltresdois {
+    display: none;
+}
+
+/*-------------------BOX MODIFICAR USER NA LISTA*/
+
+.boxletras {
+    border: 0px solid red;
+    position: relative;
+    height: 600px;
+    top: 0px;
+    width: 800px;
+    left: 50px;
+}
+
+
+.nomerece {
+    border: 0px solid blue;
+    width: 400px;
+    height: 70px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 26px;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.nomesorece {
+    border: 0px solid pink;
+    width: 400px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 26px;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.botaofecharjanela{
+    border: 0px solid green;
+    width: 100%;
+    height: 49px;
+    top: 0px;
+    right: 0px;
+    position: relative;
+}
+
+.botfecharimg{
+    top: 15px;
+    position: absolute;
+    right: 15px;
+}
+
+
+input[type=text], select {
+    width: 78%;
+    margin: 8px 0;
+    padding: 14px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 78%;
+    margin: 8px 0;
+    padding: 14px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.nomesorecetreis {
+    border: 0px solid pink;
+    width: 800px;
+    height: 60px;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    font-size: 26px;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.nomesoreceq {
+    border: 0px solid pink;
+    width: 800px;
+    height: 60px;
+    position: relative;
+    vertical-align: middle;
+    font-size: 16px;
+    top: 0px;
+    left: 0px;
+    font-size: 26px;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.nomesorecew {
+    border: 0px solid pink;
+    width: 800px;
+    height: 40px;
+    position: relative;
+    vertical-align: middle;
+    font-size: 16px;
+    top: 0px;
+    left: 0px;
+    font-size: 26px;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.baza{
+    font-size: 16px;
+    top: 10px;
+    position: relative;
+}
+
+button[id=login] {
+    width: 250px;
+    background-color: #4CAF50;
+    color: white;
+    margin: 8px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[id=passbot] {
+    width: 150px;
+    background-color: #4CAF50;
+    color: white;
+    margin: 8px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[id=passbotover] {
+    width: 150px;
+    background-color: #025803;
+    color: white;
+    margin: 8px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[id=apagarbot] {
+    width: 150px;
+    background-color: #d20000;
+    color: white;
+    margin: 8px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#apagarbotover {
+    width: 150px;
+    background-color: #a30000;
+    color: white;
+    margin: 8px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button[id=loginover] {
+    width: 250px;
+    background-color: #025803;
+    color: white;
+    margin: 8px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/*---------------------------------------------------------------------------*/
+#homepage{
+    display: none;
+}
+
+#criarusers{
+    display: block;
+}
+/*---------------------------------------------------------------------------*/
