@@ -44,6 +44,7 @@ header('Content-Type: text/html; charset=utf-8');
 		<meta charset="utf-8" />
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="stylehome3.css">
+    <link rel="stylesheet" type="text/css" href="pagaberta.css">
     <title>SmartConnect</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" type="image/x-icon" href="iconhome.png" />
@@ -122,37 +123,49 @@ header('Content-Type: text/html; charset=utf-8');
     	</div>
       <div class="developnavtres">
     		<div class="titledevelopnav">
-    			title developnav
+    			Acerca do Projeto
     		</div>
     		<div class="menubotaonav">
-    			botao um
+    			
+
+				<img src="bibliografiaum.png" onclick="funcaobibliografia()" id="bibliografiaimgid" width="20px" height="auto" alt="Italian Trulli">
+    			<a onclick="funcaobibliografia()" id="bibliografiatextid">&nbsp;&nbsp; Biografia</a>
+
     		</div>
     		<div class="menubotaonav">
-    			botao dois
+    			
+
+				<img src="papum.png" onclick="funcaopap()" id="papimgid" width="20px" height="auto" alt="Italian Trulli">
+    			<a onclick="funcaopap()" id="paptextid">&nbsp;&nbsp; PAP</a>
+
     		</div>
     		<div class="menubotaonav">
-    			botao tres
+    			
+
+				<img src="relatorioum.png" onclick="funcaorelatorio()" id="relatorioimgid" width="20px" height="auto" alt="Italian Trulli">
+    			<a onclick="funcaorelatorio()" id="relatoriotextid">&nbsp;&nbsp; Relatório</a>
+
     		</div>
     		<div class="menubotaonav">
-    			botao quatro
+    			
+
+				<img src="codeum.png" onclick="funcaoprogramacao()" id="programacaoimgid" width="20px" height="auto" alt="Italian Trulli">
+    			<a onclick="funcaoprogramacao()" id="programacaotextid">&nbsp;&nbsp; Programação</a>
+
     		</div>
     		<div class="menubotaonav">
-    			botao cinco
+    			
+
+				<img src="schoolum.png" onclick="funcaoescola()" id="escolaimgid" width="20px" height="auto" alt="Italian Trulli">
+    			<a onclick="funcaoescola()" id="escolatextid">&nbsp;&nbsp; Escola</a>
+
     		</div>
     		<div class="menubotaonav">
-    			botao seis
-    		</div>
-    		<div class="menubotaonav">
-    			botao sete
-    		</div>
-    		<div class="menubotaonav">
-    			botao oito
-    		</div>
-    		<div class="menubotaonav">
-    			botao nove
-    		</div>
-    		<div class="menubotaonav">
-    			botao dez
+    			
+
+				<img src="portugalum.png" onclick="funcaoansiao()" id="ansiaoimgid" width="20px" height="auto" alt="Italian Trulli">
+    			<a onclick="funcaoansiao()" id="ansiaotextid">&nbsp;&nbsp; Ansião</a>
+
     		</div>
     	</div>
     </nav>
@@ -218,6 +231,9 @@ header('Content-Type: text/html; charset=utf-8');
 
 <!--        corpo DIV LISTA usuarios----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="listausers">
+
+
+
 	<section class="titlistausers">
 		Lista de Utilizadores
 	</section>
@@ -515,7 +531,6 @@ endif;
 </script>
 
 
-
 </div>
 <!--     FIM DIV LISTA USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--     DIV CRIAR USERS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -529,6 +544,8 @@ endif;
 		Aqui pode criar utilizadores para que possam ter acesso à SmartConnect.</p>
 		<p>Comece por inserir o nome e os outros tópicos do formulário, após esse passo, carregue no botão enviar.</p>
 	</section> 
+
+
 	<section class="conteudocriaruser">
 		<section class="caixaumcriar">
 			<input type="text" name="nomedohome" id="nomedohome" placeholder="Nome" /*value="nomereceffff"*/>
@@ -585,9 +602,218 @@ endif;
 <!--     FIM DIV modificar USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--     DIV zonas de controlo ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="zonasdecontrolo">
-	zonas de controlo
+	
+<section class="titbio">Zonas de Controlo</section>
+
+
+
+
+
+
+	<section class="tabelalistausers">
+		<br>
+		<section class="linhatabhead">
+			<section class="colunab" id="nomezona">Nome da Zona</section>
+			<section class="colunab" id="qum">Q1</section>
+			<section class="colunab" id="qdois">Q2</section>
+			<section class="colunab" id="qtres">Q3</section>
+			<section class="colunab" id="qquatro">Q4</section>
+
+			<section class="colunab" id="saladeestar">Sala de Estar</section>
+			<section class="colunab" id="saladejantar">Sala de Jantar</section>
+			<section class="colunab" id="cozinha">Cozinha</section>
+			<section class="colunab" id="hall">Hall</section>
+			
+			<section class="colunab" id="saladearmas">Sala de Armas</section>
+			<section class="colunab" id="escritorio">Escritório</section>
+			<section class="colunab" id="roupeiro">Roupeiro</section>
+			<section class="colunab" id="wc">wc</section>
+		</section>
+
+
+		<?php
+
+// Check connection
+require_once 'db_connect.php';
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectww = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+/*-----------------O ID E MSM NECESSARIO?!------------------------*/
+
+$selecao = "SELECT id, nome, sobrenome, login, hierarquia, intropage FROM usuarios";
+$resultsel = $connectww->query($selecao);
+if ($resultsel->num_rows > 0) {
+ // output data of each row
+ while($row = $resultsel->fetch_assoc()) {
+?>
+
+			<section class="linhatabela">
+				<section class="colunab" id="nomecompdois"><?=$row["nome"]. "  " .  $row["sobrenome"]?></section>
+				<section class="colunab" id="tipouserdois">
+					<?php if ($row["hierarquia"] == 0){$hierar = "Utilizador Padrão";} else {$hierar = "Administrador";}
+					?> <?=$hierar?></section>
+				<section class="colunab" id="logindois"><?=$row["login"]?></section>
+
+				<section class="colunab" id="pginicialdois"><input id="modificaruser" name="testeee" value="modificar" onclick="divmodificarusertable('<?=$row['id']?>', '<?=$row['nome']?>', '<?=$row['sobrenome']?>', '<?=$row['login']?>', '<?=$row['hierarquia']?>', '<?=$row['intropage']?>')" type="button"></section>
+		
+			</section>
+
+	
+	<?php
+}
+echo "</section>";
+} else { echo "0 results"; }
+?>
+
+
+
+
+
+
 </div>
 <!--     FIM DIV zonas de controlo --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        DIV BIOGRAFIA----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="bibliografiadiv">
+	
+	<section class="titbio">
+		Biografia
+	</section>
+	<section class="txtbio">
+		<p class="pbio">Gonçalo Gomes de Barros, rapaz adolescente nascido a 24 de agosto de 2001 em Coimbra (atualmente com 17 anos), natural da freguesia de Abiul. 
+			Desde cedo que aprecia a área tecnológica e o seu desenvolvimento. <br><br>
+
+			Seu desporto, ciclismo, algo completamente fundamental na sua vida que pratica regularmente.
+Seus passatempos mais comuns englobam se na programação e codificação web. Diferencia-se da maioria da sociedade pelo facto de não apreciar ver séries ou filmes constantemente. Bastante pensativo quando a vontade lhe toca fazendo-o criar filosofias aleatórias. Constitui opinião formada em política, religião ciência e factos, e, completamente acessível para uma discussão amigável sobre pensamentos e factos aleatórios.
+
+<br><br>Gonçalo já planifica as suas ideias académicas e profissionais a algum tempo, planeia seguir em caminho a uma licenciatura de design, multimédia e programação na Universidade de Coimbra.
+
+<br><br>Em suma, rapaz amigável e sociável, com perspetivas para os seus horizontes.
+
+		</p>
+	</section>
+
+	<section class="imgbios">
+		<img src="imgbio.jpg" width="350px" height="auto" alt="Italian Trulli">
+	</section>
+
+
+
+</div>
+<!--     FIM DIV BIBLIOGRAFIA --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--        DIV PAP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="papdiv">
+	
+<section class="titbio">
+		PAP
+	</section>
+
+	<section class="txtpap">
+		<p class="ppap">A minha PAP é um sistema de automação e controlo pelo smartphone, na qual dei o nome SmartConnect,
+			no qual englobaSmart, de algo inovador, inteligente e Connect pela sua facilidade de conecção, para que possa 
+			ser controlado.
+			Desde cedo que aprecia a área tecnológica e o seu desenvolvimento. <br><br>
+			Seu desporto, ciclismo, algo completamente fundamental na sua vida que pratica regularmente.
+Seus passatempos mais comuns englobam se na programação e codificação web. Diferencia-se da maioria da sociedade pelo facto de não apreciar ver séries ou filmes constantemente. Bastante pensativo quando a vontade lhe toca fazendo-o criar filosofias aleatórias. Constitui opinião formada em política, religião ciência e factos, e, completamente acessível para uma discussão amigável sobre pensamentos e factos aleatórios.
+<br><br>Gonçalo já planifica as suas ideias académicas e profissionais a algum tempo, planeia seguir em caminho a uma licenciatura de design, multimédia e programação na Universidade de Coimbra.
+<br><br>Em suma, rapaz amigável e sociável, com perspetivas para os seus horizontes.
+
+		</p>
+	</section>
+</div>
+<!--     FIM DIV PAP --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--        DIV RELATORIO----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="relatoriodiv">
+	relatorio div
+</div>
+<!--     FIM DIV RELATORIO --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!--        DIV programacao----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="programacaodiv">
+	programacao div
+</div>
+<!--     FIM DIV programacao --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--        DIV ESCOLA----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="escoladiv">
+	escola div
+</div>
+<!--     FIM DIV ESCOLA --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--        DIV ansiao----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="ansiaodiv">
+	ansiao div
+</div>
+<!--     FIM DIV ansiao --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		</div>
   </body>

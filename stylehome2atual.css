@@ -233,7 +233,7 @@ body {
 
 .developnavtres {
     width: 240px;
-    height: 350px;
+    height: 250px;
     /*border: 1px solid yellow;*/
     /*border-bottom: 1px solid white;*/
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -792,7 +792,7 @@ button[id=loginover] {
 
 
 /*---------------------------------------------------------------------------*/
-#homepage{
+/*#homepage{
     display: none;
 }
 
@@ -800,3 +800,239 @@ button[id=loginover] {
     display: block;
 }
 /*---------------------------------------------------------------------------*/
+
+
+
+#bibliografiadiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+#papdiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+#relatoriodiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+#programacaodiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+#escoladiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+#ansiaodiv {
+    border: 0px solid blue;
+    position: relative;
+    top: 15px;
+    left: 75px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 3px grey;
+    color: #3e4244;
+    height: 800px;
+    display: none;
+}
+
+
+.titbio {
+    border: 0xpx solid red;
+    width: 500px;
+    height: 55px;
+    font-family: myFirstFont;
+    font-size: 40px;
+    top: 10px;
+    left: 20px;
+    position: relative;
+}
+
+.txtbio {
+    border: 0px solid red;
+    position: relative;
+    left: 25px;
+    width: 80%;
+    height: 680px;
+    top: 30px;
+}
+
+.pbio{
+    border: 0px solid red;
+    height: 650px;
+    width: 900px;
+    text-align: justify;
+}
+
+.imgbios{
+    border:0px solid red;
+    position: fixed;
+    top: 250px;
+    left: 1350px;
+    width: 350px;
+    height: 500px;
+}
+
+.txtpap {
+    border: 0px solid red;
+    position: relative;
+    left: 25px;
+    width: 80%;
+    height: 680px;
+    top: 30px;
+}
+
+.ppap{
+    border: 0px solid red;
+    height: 650px;
+    width: 90%;
+    text-align: justify;
+}
+
+/*-------------tabela zonas------------------------*/
+/*
+#nomecompum {
+    left: 40px;
+    position: relative;
+}
+
+#tipouserum {
+    left: 350px;
+    position: relative;
+}
+
+#loginum {
+    left: 650px;
+    position: relative;
+}
+
+#pginicialum {
+    left: 970px;
+    position: relative;
+}*/
+
+.colunab {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-family: myFirstFont;
+    font-size: 20px;
+    border: 0px solid red;
+    top: 0px;
+}
+
+#nomezona{
+    width: 150px;
+    left: 20px;
+}
+
+#qum{
+    width: 70px;
+    left: 20px;
+}
+
+#qdois{
+    width: 70px;
+    left: 20px;
+    
+}
+
+#qtres{
+    width: 70px;
+    left: 20px;
+    
+}
+
+#qquatro{
+    width: 70px;
+    left: 20px;
+    
+}
+
+#saladeestar{
+    width: 150px;
+    left: 20px;
+    
+}
+
+#saladejantar{
+    width: 150px;
+    left: 20px;
+    
+}
+
+#cozinha{
+    width: 100px;
+    left: 20px;
+    
+}
+
+#hall{
+    width: 70px;
+    left: 20px;
+    
+}
+
+#saladearmas{
+    width: 150px;
+    left: 20px;
+    
+}
+
+#escritorio{
+    width: 150px;
+    left: 20px;
+    
+}
+
+#roupeiro{
+    width: 150px; 
+    left: 20px;  
+    
+}
+
+#wc{
+    width: 50px;
+    left: 20px;
+    
+}
