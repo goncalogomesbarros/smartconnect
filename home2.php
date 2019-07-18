@@ -1,10 +1,19 @@
 <?php
 function debug_to_console( $data ) {
-	$output = $data;
-	if ( is_array( $output ) )
-			$output = implode( ',', $output);
+    $output = $data;
+    if ( is_array( $output ) )
+        $output = implode( ',', $output);
 
-	echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+}
+
+function console_log($output, $with_script_tags = true) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
+');';
+    if ($with_script_tags) {
+        $js_code = '<script>' . $js_code . '</script>';
+    }
+	echo $js_code;
 }
 header('Content-Type: text/html; charset=utf-8');
 // Conexão
@@ -194,43 +203,194 @@ header('Content-Type: text/html; charset=utf-8');
 			</div>
     </div>
 
-
-		<div class="conteudoprincipal">
+	
+		<div class="conteudoprincipal" style="position:relative; left:232px">
 			&nbsp;
-
+		
 <!--        corpo DIV HOME PAGE----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="homepage">
-	HOME PAGE - pilinha
+<div id="homepage" class="dia">
+
+<section class="titqwert">
+		Bem-Vindo <?php echo $dados['nome']; ?>!
+	</section>
+	<section class="txtlistausers">
+		<p>Bem-vindo à plataforma SmartConnect! </p><p>Aqui consegue controlar todos os sensores de movimento, sensores de temperatura,
+			 alarme e luzes da sua casa!
+		</p>
+		<p>Sente-se, relaxe e desfrute de toda a automação que tem ao seu dispor!</p>
+	</section> 
+
+
+
+
+
+
+<section class="caixaa">
+	<section class="titaaa">
+		Controle as suas luzes!
+	</section>
+	<section class="boardluzes">
+		<section class="luxlig">
+			<span>Quarto Principal<span>     <!--por configurar php-->
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+	</section>
+</section>
+
+
+
+<section class="tempcx">
+<section class="titbbbb">
+	A sua temperatura:
+</section>
+	<section class="boardtemp">
+		<section class="atem">A temperatura da sua casa neste momento está a:<br></section>
+
+		<section class="tempumaa">
+			20ºC
+		</section>
+	</section>
+
+</section>
+
+
+
+<section class="tempcx">
+<section class="titbbbb">
+	Deteção de Pessoas:
+</section>
+	<section class="boardtemp">
+		<section class="atem"><br></section>
+
+		<section class="detet">
+			<span>aki</span>
+		</section>
+
+<section class="txtdetet">
+			O sensor de aproximação humana consegue fazer com que o sistema de alarme 
+			seja ativado em caso de assalto. Com o seu uso consegue tambem com que 
+			visione de hexiste movimento na area capturada pelo mesmo.
+		<BR><BR>
+			A figura do lado esquerdo representa se hexiste movimento humano, 
+			se o fundo estiver verde é porque não se deteta movimento, se o mesmo estiver 
+			vermelho é porque foi deetado.
+</section>
+	</section>
+
+</section>
+
+
+
+
+<section class="tempcx">
+<section class="titbbbb">
+	Sistema de Alarme:
+</section>
+	<section class="boardtemp">
+		<section class="atem"><br></section>
+
+		<section class="detet">
+			<span>aki</span>
+		</section>
+
+<section class="txtdetet">
+			O sistema de alarme permite que tranquilize enquanto está fora. 
+			Se estiver ativado, em caso de movimento detetado o temporizador será ativado por 40 segundos,
+			se ao fim desse tempo o sistema de alarme não for desativado a sirene será disparada.
+			<br><br>
+			No caso de o sistema de alarme estar desativado, pode ser ativado a qualquer momento.
+	</section>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 <!--     FIM DIV HOME PAGE --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DISPOSITIVOS----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="dispositivosdiv">
+<div id="dispositivosdiv" class="dia">
 	dispositivos
 </div>
 <!--     FIM DIV DISPOSITIVOS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV LUZES----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="luzesdiv">
+<div id="luzesdiv" class="dia">
 	luzes
 </div>
 <!--     FIM DIV LUZES --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV SENSORES----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="sensoresdiv">
+<div id="sensoresdiv" class="dia">
 	sensores
 </div>
 <!--     FIM DIV SENSORES --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV ALARME----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="alarmediv">
+<div id="alarmediv" class="dia">
 	alarme
 </div>
 <!--     FIM DIV ALARME --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV CAMARAS----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="camarasdiv">
+<div id="camarasdiv" class="dia">
 	camaras
 </div>
 <!--     FIM DIV CAMARAS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--        corpo DIV LISTA usuarios----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="listausers">
+<div id="listausers" class="dia">
 
 
 
@@ -268,7 +428,7 @@ require_once 'db_connect.php';
 
 /*-----------------O ID E MSM NECESSARIO?!------------------------*/
 
-$selecao = "SELECT id, nome, sobrenome, login, hierarquia, intropage FROM usuarios";
+$selecao = "SELECT * FROM usuarios";
 $resultsel = $connect->query($selecao);
 if ($resultsel->num_rows > 0) {
  // output data of each row
@@ -313,6 +473,7 @@ $connect->close();
 					
 				</section>
 				<form   action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+				<input type="hidden" id="oculto" name="id"></input>
 				<section class="nomesorece" id="vamolaavedois">
 					<input type="text" name="nomedohome" id="nomedohome" placeholder="nome" /*value="nomereceffff"*/>
 				</section>
@@ -332,7 +493,7 @@ $connect->close();
 				</section>
 				
 				<section class="nomesorece" id="vamolaavedois">
-					<a class="baza"><input type="checkbox" id="pgintrocheck" name="intropagecheck" value="intropagecheck"> Página Inicial</a>
+					<a class="baza"><input type="checkbox" id="pgintrocheck" name="intropagecheck"> Página Inicial</a>
 				</section>
 
 
@@ -359,12 +520,32 @@ require_once 'db_connect.php';
 //error_reporting(0);
 
 if(isset($_GET['repor'])):
+	$iddogajo = $GET['id'];
 	$nomedome = $_GET['nomedohome'];
 	$sebredome = $_GET['sobredohome'];
 	$logindome = $_GET['logindohome'];
 	$tipodome = $_GET['tipodome'];
 	$intropagecheck = $_GET['intropagecheck'];
-	debug_to_console( $intropagecheck );
+	if ($intropagecheck == "on") {
+		$intropagecheckdois = 1;
+	}else{
+		$intropagecheckdois = 0;
+	}
+	/*debug_to_console( $intropagecheck );*/
+
+
+
+	$sqlupdt= "UPDATE usuarios SET nome='$nomedome', sobrenome='$sebredome', login='$logindome',
+	hierarquia='$tipodome', intropage='$intropagecheckdois' WHERE id=$iddogajo";
+
+	$resultadouma = mysqli_query($connect, $sqlupdt);
+
+
+
+
+
+
+
 
 	//falta apanhar o id para ir a bd
 /*
@@ -491,6 +672,7 @@ endif;
 			document.getElementById("sobredohome").value = sobrenome; 
 			document.getElementById("logindohome").placeholder = "Login: "+login;
 			document.getElementById("logindohome").value = login; 
+			document.getElementById("oculto").value = varid; 
 
 
 			if (varhierarquia == 0){
@@ -535,7 +717,7 @@ endif;
 <!--     FIM DIV LISTA USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--     DIV CRIAR USERS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<div id="criarusers">
+<div id="criarusers" class="dia">
 <section class="titlistausers">
 		Criar Utilizador
 	</section>
@@ -595,13 +777,13 @@ endif;
 </div>
 <!--     FIM DIV criiar USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--     DIV modificar USERS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="modificarusers">
+<div id="modificarusers" class="dia">
 	modificar users
 </div>
 
 <!--     FIM DIV modificar USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--     DIV zonas de controlo ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="zonasdecontrolo">
+<div id="zonasdecontrolo" class="dia">
 	
 <section class="titbio">Zonas de Controlo</section>
 
@@ -609,27 +791,7 @@ endif;
 
 
 
-
-	<section class="tabelalistausers">
-		<br>
-		<section class="linhatabhead">
-			<section class="colunab" id="nomezona">Nome da Zona</section>
-			<section class="colunab" id="qum">Q1</section>
-			<section class="colunab" id="qdois">Q2</section>
-			<section class="colunab" id="qtres">Q3</section>
-			<section class="colunab" id="qquatro">Q4</section>
-
-			<section class="colunab" id="saladeestar">Sala de Estar</section>
-			<section class="colunab" id="saladejantar">Sala de Jantar</section>
-			<section class="colunab" id="cozinha">Cozinha</section>
-			<section class="colunab" id="hall">Hall</section>
-			
-			<section class="colunab" id="saladearmas">Sala de Armas</section>
-			<section class="colunab" id="escritorio">Escritório</section>
-			<section class="colunab" id="roupeiro">Roupeiro</section>
-			<section class="colunab" id="wc">wc</section>
-		</section>
-
+<section class="zonasmaxdiv">
 
 		<?php
 
@@ -654,24 +816,91 @@ endif;
 if(!isset($_SESSION['logado'])):
 header('Location: index.php');
 endif;
-/*-----------------O ID E MSM NECESSARIO?!------------------------*/
 
-$selecao = "SELECT id, nome, sobrenome, login, hierarquia, intropage FROM usuarios";
-$resultsel = $connectww->query($selecao);
-if ($resultsel->num_rows > 0) {
- // output data of each row
- while($row = $resultsel->fetch_assoc()) {
-?>
+$selecaoww = "SELECT * FROM zonas";
+$resultselww = $connectww->query($selecaoww);
+if ($resultselww->num_rows > 0) {?>
+ 
+
+
+ <section class="tabelalistausers">
+ <br>
+ <section class="linhatabhead">
+	 <section class="colunaa" id="nomezona">Nome da Zona</section>
+	 
+	 <section class="colunaa" id="qum">Q1</section>
+	 <section class="colunaa" id="qdois">Q2</section>
+	 <section class="colunaa" id="qtres">Q3</section>
+	 <section class="colunaa" id="qquatro">Q4</section>
+
+	 <section class="colunaa" id="saladeestar">Sala de Estar</section>
+	 <section class="colunaa" id="saladejantar">Sala de Jantar</section>
+	 <section class="colunaa" id="cozinha">Cozinha</section>
+	 <section class="colunaa" id="hall">Hall</section>
+	 
+	 <section class="colunaa" id="saladearmas">Sala de Armas</section>
+	 <section class="colunaa" id="escritorio">Escritório</section>
+	 <section class="colunaa" id="roupeiro">Roupeiro</section>
+	 <section class="colunaa" id="wc">wc</section>
+ </section>
+<?php
+
+ while($rowww = $resultselww->fetch_assoc()) {
+	?>
 
 			<section class="linhatabela">
-				<section class="colunab" id="nomecompdois"><?=$row["nome"]. "  " .  $row["sobrenome"]?></section>
-				<section class="colunab" id="tipouserdois">
-					<?php if ($row["hierarquia"] == 0){$hierar = "Utilizador Padrão";} else {$hierar = "Administrador";}
-					?> <?=$hierar?></section>
-				<section class="colunab" id="logindois"><?=$row["login"]?></section>
+	 <section class="colunad" id="nomezona"><?=$rowww["nome"]?></section>
+	 
+	 <section class="colunad" id="qum">
+		 <?php if ($rowww["q1"] == "1"){$qumaf = "On";} else {$qumaf = "Off";}
+					?> <?=$qumaf?>
+	 </section>
+	 <section class="colunad" id="qdois">
+		 <?php if ($rowww["q2"] == "1"){$qdoisaf = "On";} else {$qdoisaf = "Off";}
+					?> <?=$qdoisaf?>
 
-				<section class="colunab" id="pginicialdois"><input id="modificaruser" name="testeee" value="modificar" onclick="divmodificarusertable('<?=$row['id']?>', '<?=$row['nome']?>', '<?=$row['sobrenome']?>', '<?=$row['login']?>', '<?=$row['hierarquia']?>', '<?=$row['intropage']?>')" type="button"></section>
-		
+		<!--
+		 </?php if ($rowww["hierarquia"] == 0){$hierar = "Utilizador Padrão";} else {$hierar = "Administrador";}
+					?> </?=$hierar?>-->
+
+
+
+	 </section>
+	 <section class="colunad" id="qtres">
+		 <?php if ($rowww["q3"] == 0){$qtresaf = "Off";} else {$qtresaf = "On";}
+					?> <?=$qtresaf?>
+	 </section>
+	 <section class="colunad" id="qquatro">
+		 <?php if ($rowww["q4"] == 0){$qquatroaf = "Off";} else {$qquatroaf = "On";}
+					?> <?=$qquatroaf?>
+	 </section>
+
+	 <section class="colunad" id="saladeestar">
+		 <?php if ($rowww["salaestar"] == 0){$qquatroaf = "Off";} else {$qquatroaf = "On";}
+					?> <?=$qquatroaf?>
+	 </section>
+	 <section class="colunad" id="saladejantar">
+		 <?php if($rowww["salajantar"] == 0){echo "Off";}else{echo "On";}?>
+	 </section>
+	 <section class="colunad" id="cozinha">
+		 <?php if($rowww["cozinha"] == 0){echo "Off";}else{echo "On";}?>
+	 </section>
+	 <section class="colunad" id="hall">
+		 <?php if($rowww["hall"] == 0){echo "Off";}else{echo "On";}?>
+	 </section>
+	 
+	 <section class="colunad" id="saladearmas">
+	 	<?php if($rowww["salaarmas"] == 0){echo "Off";}else{echo "On";}?>
+	 </section>
+	 <section class="colunad" id="escritorio">
+	 	<?php if($rowww["escritorio"] == 0){echo "Off";}else{echo "On";}?>
+	 </section>
+	 <section class="colunad" id="roupeiro">
+		 <?php if($rowww["roupeiro"] == 0){echo "Off";}else{echo "On";}?>
+	 </section>
+	 <section class="colunad" id="wc">
+	 	<?php if($rowww["wc"] == 0){echo "Off";}else{echo "On";}?>
+	 </section>
 			</section>
 
 	
@@ -681,9 +910,118 @@ echo "</section>";
 } else { echo "0 results"; }
 ?>
 
+</section>
+
+<section class="titbio">Criar Zona de Controlo</section>
+<section class="criarzonadecontrolo">
+	<form method="get">
+	<section>
+	<table class="tabelacriarzona" >
+  <tr>
+    <td colspan="2"><input type="text" name="nomezona" id="nomezonainp" placeholder="Nome da Zona" required></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="pgintrocheck" name="q1check"></td>
+    <td>Quarto Principal</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="pgintrocheck" name="q2check"></td>
+    <td>Quarto André</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="pgintrocheck" name="q3check" value="intropagecheck"></td>
+    <td>Quarto Diana</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="q4check" value="intropagecheck"></td>
+    <td>Quarto Hospedes</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="salajantarcheck" value="intropagecheck"></td>
+    <td>Sala de Jantar</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="salaestarcheck" value="intropagecheck"></td>
+    <td>Sala de Estar</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="cozinhacheck" value="intropagecheck"></td>
+    <td>Cozinha</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="hallcheck" value="intropagecheck"></td>
+    <td>Hall</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="wccheck" value="intropagecheck"></td>
+    <td>WC</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="roupeirocheck" value="intropagecheck"></td>
+    <td>Roupeiro</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="escritoriocheck" value="intropagecheck"></td>
+    <td>Escritório</td>
+  </tr>
+    <td><input type="checkbox" id="pgintrocheck" name="salaarmascheck" value="intropagecheck"></td>
+    <td>Sala de Armas</td>
+  </tr>
+  <tr>
+    <td colspan="2"><button type="submit" id="subzonas" name="subzonasn" onmouseover="this.id='loginover'" onmouseout="this.id='login'">Submeter</button></td></form>
+  </tr>
+</table>
+	</section>
+	<?php
+// Conexão
+require_once 'db_connect.php';
+
+
+// Botão enviar
+	if(isset($_POST['subzonasn'])):
+	$nomezonanv = mysqli_escape_string($connect, $_GET['nomezona']);
+
+	$q1zonanv = mysqli_escape_string($connect, $_GET['q1check']);
+	console_log($nomezonanv);	
+	$q2zonanv = mysqli_escape_string($connect, $_GET['q2check']);
+	$q3zonanv = mysqli_escape_string($connect, $_GET['q3check']);
+	$q4zonanv = mysqli_escape_string($connect, $_GET['q4check']);
+	$salajantarzonanv = mysqli_escape_string($connect, $_GET['salajantarcheck']);
+	$salaestarzonanv = mysqli_escape_string($connect, $_GET['salaestarcheck']);
+	$cozinhazonanv = mysqli_escape_string($connect, $_GET['cozinhacheck']);
+	$hallzonanv = mysqli_escape_string($connect, $_GET['hallcheck']);
+	$wczonanv = mysqli_escape_string($connect, $_GET['wccheck']);
+	$roupeirozonanv = mysqli_escape_string($connect, $_GET['roupeirocheck']);
+	$escritoriozonanv = mysqli_escape_string($connect, $_GET['escritoriocheck']);
+	$salaarmaszonanv = mysqli_escape_string($connect, $_GET['salaarmascheck']);
 
 
 
+/*
+		$sql = "SELECT login FROM usuarios WHERE login = '$login'";
+		$sql = "INSERT INTO `zonas`(`id`, `nome`, `q1`, `q2`, `q3`, `q4`, `salaestar`, `salajantar`, `cozinha`, `hall`, `roupeiro`, `salaarmas`, `wc`, `escritorio`) 
+		VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],[value-14])";
+		$resultado = mysqli_query($connect, $sql);
+
+		if(mysqli_num_rows($resultado) > 0):
+		$senha = md5($senha);
+		$sql = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'";
+
+
+
+		$resultado = mysqli_query($connect, $sql);
+
+			if(mysqli_num_rows($resultado) == 1):
+				$dados = mysqli_fetch_array($resultado);
+				mysqli_close($connect);
+				$_SESSION['logado'] = true;
+				$_SESSION['id_usuario'] = $dados['id'];
+				header('Location: divisao.php');
+			else:
+				$erros[] = "<li> Usuário e senha não conferem </li>";
+			endif;
+
+		else:
+			$erros[] = "<li> Usuário inexistente </li>";
+		endif;
+
+	endif;
+*/
+endif;
+?>
+</section>
 
 
 </div>
@@ -727,7 +1065,7 @@ echo "</section>";
 
 
 <!--        DIV BIOGRAFIA----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="bibliografiadiv">
+<div id="bibliografiadiv" class="dia">
 	
 	<section class="titbio">
 		Biografia
@@ -756,7 +1094,7 @@ Seus passatempos mais comuns englobam se na programação e codificação web. D
 <!--     FIM DIV BIBLIOGRAFIA --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--        DIV PAP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="papdiv">
+<div id="papdiv" class="dia">
 	
 <section class="titbio">
 		PAP
@@ -778,26 +1116,26 @@ Seus passatempos mais comuns englobam se na programação e codificação web. D
 <!--     FIM DIV PAP --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--        DIV RELATORIO----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="relatoriodiv">
+<div id="relatoriodiv" class="dia">
 	relatorio div
 </div>
 <!--     FIM DIV RELATORIO --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
 <!--        DIV programacao----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="programacaodiv">
+<div id="programacaodiv" class="dia">
 	programacao div
 </div>
 <!--     FIM DIV programacao --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--        DIV ESCOLA----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="escoladiv">
+<div id="escoladiv" class="dia">
 	escola div
 </div>
 <!--     FIM DIV ESCOLA --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--        DIV ansiao----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="ansiaodiv">
+<div id="ansiaodiv" class="dia">
 	ansiao div
 </div>
 <!--     FIM DIV ansiao --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
