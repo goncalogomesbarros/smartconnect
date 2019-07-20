@@ -994,3 +994,7 @@ function funcaoadmin(){
   document.write('<section class="titbio">PAP</section>');
 
 }
+
+function funcaopadrao(){
+  document.write('<section class="titbio">PAP</section>');
+}

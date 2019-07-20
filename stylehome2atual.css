@@ -167,11 +167,11 @@ body {
 
 .developnav {
     width: 240px;
-    height: 125px;
+    height: 1025px;
     border: 0px solid yellow;
     /*border-bottom: 1px solid white;*/
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    position: fixed;
+    position: relative;
     left: 0;
     top: 102px;
     background-color: #19222a;
@@ -959,7 +959,7 @@ button[id=loginover] {
     font-family: myFirstFont;
     font-size: 20px;
     border: 0px solid red;
-    top: 0px;
+    top: 8px;
 }
 
 
@@ -1251,6 +1251,36 @@ span {
     top: -80px;
 }
 
+.deteta{
+    border-radius: 500px;
+    text-align: center;
+    border: 0px solid blue;
+    width: 200px;
+    color: white;
+    height: 200px;
+    background-color: #4CAF50;
+    margin: 20px;
+    display: inline-block;
+    left: 30px;
+    position: relative;
+    top: -20px;
+}
+
+.deteta:hover{
+    
+    background-color: #a30000;
+}
+
+#sensorpngid{
+    position: relative;
+    top: 30px;
+}
+
+#alarmepngid{
+    position: relative;
+    top: 10px;
+}
+
 .detet:hover{
     border-radius: 500px;
     text-align: center;
@@ -1274,5 +1304,75 @@ span {
     left: 70px;
     position: relative;
     margin: 20px;
+    display: inline-block;
+}
+
+.apagarzona{
+    border: 0px solid red;
+}
+
+.listazonasss{
+    border: 10x solid blue;
+    position: relative;
+    left: 21px;
+    width: 80%;
+}
+.bloko{
+    width: 40%;
+}
+.aplicarzona{
+    border: 0px solid red;
+}
+.alterarpasspriv{
+    border: 0px solid red;
+    position: relative;
+    left: 21px;
+    top: 25px;
+    width: 80%;
+}
+
+.caixaaaa{
+    border: 0px solid blue;
+    width: 450px;
+    position: relative;
+}
+
+.boxmoduser{
+    border: 0px solid red;
+    top: 70px;
+    position: relative;
+}
+.titbioq {
+    border: 0xpx solid red;
+    width: 500px;
+    height: 55px;
+    font-family: myFirstFont;
+    font-size: 40px;
+    top: 50px;
+    left: 20px;
+    position: relative;
+}
+
+.tabelazonasuse{
+   
+}
+
+
+.titbioss {
+    border: 0px solid red;
+    width: 500px;
+    height: 55px;
+    font-family: myFirstFont;
+    font-size: 40px;
+    top: 120px;
+    left: 20px;
+    position: relative;
+}
+.quarenta{
+    border: 0px solid red;
+    top: 130px;
+    left: 20px;
+    position: relative;
+    width: 500px;
     display: inline-block;
 }

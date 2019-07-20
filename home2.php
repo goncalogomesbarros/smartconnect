@@ -88,12 +88,14 @@ header('Content-Type: text/html; charset=utf-8');
     		<div class="menubotaonav">
     		 <img src="databaseum.png" onclick="funcaodispositivos()" id="dispositivosimgid" width="20px" height="auto" alt="Italian Trulli">
          <a id="dispositivostextid" onclick="funcaodispositivos()">&nbsp;&nbsp;	Dispositivos</a>
-    		</div>
+			</div>
+			
     		<div class="menubotaonav">
     		 <img src="lampum.png" onclick="funcaoluzes()" id="luzesimgid" width="20px" height="auto" alt="Italian Trulli">
          <a id="luzestextid" onclick="funcaoluzes()">&nbsp;&nbsp;
     			Luzes</a>
-    		</div>
+			</div>
+			
     		<div class="menubotaonav">
     		 <img src="sensorsum.png" onclick="funcaosensores()" id="sensoresimgid" width="20px" height="auto" alt="Italian Trulli">
          <a id="sensorestextid" onclick="funcaosensores()">&nbsp;&nbsp;
@@ -294,7 +296,7 @@ header('Content-Type: text/html; charset=utf-8');
 		<section class="atem"><br></section>
 
 		<section class="detet">
-			<span>aki</span>
+			<span><img src="sensorpng.png" id="sensorpngid" alt="" width="150px"></span>
 		</section>
 
 <section class="txtdetet">
@@ -320,8 +322,8 @@ header('Content-Type: text/html; charset=utf-8');
 	<section class="boardtemp">
 		<section class="atem"><br></section>
 
-		<section class="detet">
-			<span>aki</span>
+		<section class="deteta">
+			<span><img src="alarmepng.png" id="alarmepngid" alt="" width="150px"></span>
 		</section>
 
 <section class="txtdetet">
@@ -365,22 +367,145 @@ header('Content-Type: text/html; charset=utf-8');
 <!--     FIM DIV HOME PAGE --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DISPOSITIVOS----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="dispositivosdiv" class="dia">
-	dispositivos
+
+<section class="titlistausers">
+	Dispositivos
+</section>
 </div>
 <!--     FIM DIV DISPOSITIVOS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV LUZES----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="luzesdiv" class="dia">
-	luzes
+	
+<section class="titqwert">
+		Bem-Vindo <?php echo $dados['nome']; ?>!
+	</section>
+	<section class="txtlistausers">
+		<p>Bem-vindo à plataforma SmartConnect! </p><p>Aqui consegue controlar todos os sensores de movimento, sensores de temperatura,
+			 alarme e luzes da sua casa!
+		</p>
+		<p>Sente-se, relaxe e desfrute de toda a automação que tem ao seu dispor!</p>
+	</section> 
+
+
+
+
+
+
+<section class="caixaa">
+	<section class="titaaa">
+		Controle as suas luzes!
+	</section>
+	<section class="boardluzes">
+		<section class="luxlig">
+			<span>Quarto Principal<span>     <!--por configurar php-->
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+		
+		<section class="luxlig">
+			<span>Quarto Principal<span>
+		</section>
+	</section>
+</section>
 </div>
 <!--     FIM DIV LUZES --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV SENSORES----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="sensoresdiv" class="dia">
-	sensores
+	
+
+<section class="tempcx">
+<section class="titbbbb">
+	A sua temperatura:
+</section>
+	<section class="boardtemp">
+		<section class="atem">A temperatura da sua casa neste momento está a:<br></section>
+
+		<section class="tempumaa">
+			20ºC
+		</section>
+	</section>
+
+</section>
+
+
+
+<section class="tempcx">
+<section class="titbbbb">
+	Deteção de Pessoas:
+</section>
+	<section class="boardtemp">
+		<section class="atem"><br></section>
+
+		<section class="detet">
+			<span><img src="sensorpng.png" id="sensorpngid" alt="" width="150px"></span>
+		</section>
+
+<section class="txtdetet">
+			O sensor de aproximação humana consegue fazer com que o sistema de alarme 
+			seja ativado em caso de assalto. Com o seu uso consegue tambem com que 
+			visione de hexiste movimento na area capturada pelo mesmo.
+		<BR><BR>
+			A figura do lado esquerdo representa se hexiste movimento humano, 
+			se o fundo estiver verde é porque não se deteta movimento, se o mesmo estiver 
+			vermelho é porque foi deetado.
+</section>
+	</section>
+
+</section>
 </div>
 <!--     FIM DIV SENSORES --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV ALARME----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="alarmediv" class="dia">
-	alarme
+	
+
+<section class="tempcx">
+<section class="titbbbb">
+	Sistema de Alarme:
+</section>
+	<section class="boardtemp">
+		<section class="atem"><br></section>
+
+		<section class="deteta">
+			<span><img src="alarmepng.png" id="alarmepngid" alt="" width="150px"></span>
+		</section>
+
+<section class="txtdetet">
+			O sistema de alarme permite que tranquilize enquanto está fora. 
+			Se estiver ativado, em caso de movimento detetado o temporizador será ativado por 40 segundos,
+			se ao fim desse tempo o sistema de alarme não for desativado a sirene será disparada.
+			<br><br>
+			No caso de o sistema de alarme estar desativado, pode ser ativado a qualquer momento.
+	</section>
+
+</section>
+
+
 </div>
 <!--     FIM DIV ALARME --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--        corpo DIV CAMARAS----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -393,8 +518,68 @@ header('Content-Type: text/html; charset=utf-8');
 <div id="listausers" class="dia">
 
 
+<!--
+</?php
+		// Conexão
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$db_name = "smartconnect";
+		
+		$connectqq = mysqli_connect($servername, $username, $password, $db_name);
+		
+		if(mysqli_connect_error()):
+			echo "Falha na conexão: ".mysqli_connect_error();
+		endif;
 
-	<section class="titlistausers">
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+	header('Location: index.php');
+endif;
+	
+
+
+
+
+
+	$idqq = $_SESSION['id_usuario'];
+	$sqlqq = "SELECT * FROM usuarios WHERE id = $idqq";
+/* 
+	$vamola = $connect->query($sqlqq);*/
+	
+	$resultadoqq = mysqli_query($connectqq, $sqlqq);
+	$dadosqq = mysqli_fetch_array($resultadoqq);
+	/*mysqli_close($connect);*/
+	$loleqq = $dadosqq['hierarquia'];
+	/*$inteiro = intval($dados);*/
+ 
+	$inteiroqq = intval($loleqq);
+
+	/*echo $inteiro;*/
+
+	if  ($inteiroqq == 1){?>
+		ksksksks
+	</?php}else{?>
+		ksss
+	</?php}?>
+
+
+	
+	-->
+
+
+
+<!--  sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss-->
+
+
+
+
+
+
+
+
+<section class="titlistausers">
 		Lista de Utilizadores
 	</section>
 	<section class="txtlistausers">
@@ -475,32 +660,33 @@ $connect->close();
 				<form   action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
 				<input type="hidden" id="oculto" name="id"></input>
 				<section class="nomesorece" id="vamolaavedois">
-					<input type="text" name="nomedohome" id="nomedohome" placeholder="nome" /*value="nomereceffff"*/>
+					<input type="text" name="nomedohome" id="nomedohome" placeholder="nome" required /*value="nomereceffff"*/>
 				</section>
 
 				<section class="nomesorece" id="vamolaavedois">
-					<input type="text" name="sobredohome" id="sobredohome" placeholder="sobrenome" /*value="nomereceffff"*/>
+					<input type="text" name="sobredohome" id="sobredohome" placeholder="sobrenome" required  /*value="nomereceffff"*/>
 				</section>
 
 				<section class="nomesorece" id="vamolaavedois">
-					<input type="text" name="logindohome" id="logindohome" placeholder="login" /*value="nomereceffff"*/>
+					<input type="text" name="logindohome" id="logindohome" placeholder="login" required  /*value="nomereceffff"*/>
 				</section>
 
 				<section class="nomesoreceq" id="vamolaavedois">
 					<a class="baza">
- 					<input type="radio" id="radioum" name="tipodome" value="admin"> Administrador &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
- 					<input type="radio" id="radiodois" name="tipodome" value="padrao"> Utilizador Padrão</a>
+ 					<input type="radio" id="radioum" name="tipodome" value="1"> Administrador &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ 					<input type="radio" id="radiodois" name="tipodome" value="0"> Utilizador Padrão</a>
 				</section>
 				
 				<section class="nomesorece" id="vamolaavedois">
+				<input type="hidden" name="intropagecheck" value="off" />
 					<a class="baza"><input type="checkbox" id="pgintrocheck" name="intropagecheck"> Página Inicial</a>
 				</section>
 
 
 				<section class="nomesorecetreis" id="vamolaavedois">
 					<button type="submit" id="login" name="repor" onmouseover="this.id='loginover'" onmouseout="this.id='login'">Submeter</button>
-					<button type="submit" id="passbot" name="reporpass" value="Repor Password" onmouseover="this.id='passbotover'" onmouseout="this.id='passbot'">Repor Password</button>
-					<button type="submit" id="apagarbot" name="btn-entrar" value="Login" onmouseover="this.id='apagarbotover'" onmouseout="this.id='apagarbot'">Apagar Utilizador</button>
+					<button type="submit" id="passbot" name="reporpass" value="reporpas" onmouseover="this.id='passbotover'"   onmouseout="this.id='passbot'">Repor Password</button>
+					<button type="submit" id="apagarbot" name="apagaruserui" value="Login" onmouseover="this.id='apagarbotover'" onmouseout="this.id='apagarbot'">Apagar Utilizador</button>
 				</section>
 </form>
 
@@ -519,8 +705,97 @@ require_once 'db_connect.php';
 
 //error_reporting(0);
 
+if(isset($_GET['reporpass'])):
+	$idreporpass = $_GET['id'];
+	$passbase = "123456";
+	$passnova = MD5($passbase);
+
+
+/*
+	$sqlupdt= "UPDATE usuarios SET nome='$nomedome', sobrenome='$sebredome', login='$logindome',
+	hierarquia='$tipodome', intropage='$intropagecheckdois' WHERE id=$iddogajo";
+
+	$resultadouma = mysqli_query($connect, $sqlupdt);
+*/
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwqpi = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqpi = "UPDATE usuarios SET senha='$passnova' WHERE id=$idreporpass";
+$resultselwwqpi = $connectwwqpi->query($selecaowwqpi);
+ 
+
+
+
+endif;
+?>
+
+
+<?php
+// Conexão
+require_once 'db_connect.php';
+
+//error_reporting(0);
+
+if(isset($_GET['apagaruserui'])):
+	$idreporpass = $_GET['id'];
+
+
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwqpiq = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqpiq = "DELETE FROM `usuarios` WHERE id=$idreporpass";
+$resultselwwqpiq = $connectwwqpiq->query($selecaowwqpiq);
+ 
+
+
+
+endif;
+?>
+
+
+
+<?php
+// Conexão
+require_once 'db_connect.php';
+
+//error_reporting(0);
+
 if(isset($_GET['repor'])):
-	$iddogajo = $GET['id'];
+	$iddogajo = $_GET['id'];
 	$nomedome = $_GET['nomedohome'];
 	$sebredome = $_GET['sobredohome'];
 	$logindome = $_GET['logindohome'];
@@ -534,81 +809,39 @@ if(isset($_GET['repor'])):
 	/*debug_to_console( $intropagecheck );*/
 
 
-
+/*
 	$sqlupdt= "UPDATE usuarios SET nome='$nomedome', sobrenome='$sebredome', login='$logindome',
 	hierarquia='$tipodome', intropage='$intropagecheckdois' WHERE id=$iddogajo";
 
 	$resultadouma = mysqli_query($connect, $sqlupdt);
-
-
-
-
-
-
-
-
-	//falta apanhar o id para ir a bd
-/*
-	if(empty($nomedome)):
-		$nomedome = echo( $saidaum );
-	endif;
-
-	if(empty($sobredome)):
-		$sobredome =  echo( $saidadois );
-	endif;
-
-	if(empty($logindome)):
-		$logindome =  echo( $saidatres );
-	endif;
-
-	if(empty($tipodome)):
-		$tipodome =  echo( $saidaquatro );
-	endif;
-
-	if(empty($intropagecheck)):
-		$intropagecheck =  echo( $saidacinco );
-	endif;
-
-	$sqlum = "SELECT login FROM usuarios WHERE login = '$login'";
-	$sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
-	$resultadoum = mysqli_query($connect, $sqlum);
-
-
-
-
-	if(empty($login) or empty($senha)):
-		$erros[] = "<li> O campo login/senha precisa ser preenchido </li>";
-	else:
-		// 105 OR 1=1
-	    // 1; DROP TABLE teste
-
-		$sql = "SELECT login FROM usuarios WHERE login = '$login'";
-		$resultado = mysqli_query($connect, $sql);
-
-		if(mysqli_num_rows($resultado) > 0):
-		$senha = md5($senha);
-		$sql = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'";
-
-
-
-		$resultado = mysqli_query($connect, $sql);
-
-			if(mysqli_num_rows($resultado) == 1):
-				$dados = mysqli_fetch_array($resultado);
-				mysqli_close($connect);
-				$_SESSION['logado'] = true;
-				$_SESSION['id_usuario'] = $dados['id'];
-				header('Location: divisao.php');
-			else:
-				$erros[] = "<li> Usuário e senha não conferem </li>";
-			endif;
-
-		else:
-			$erros[] = "<li> Usuário inexistente </li>";
-		endif;
-
-	endif;
 */
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwq = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwq = "UPDATE usuarios SET nome='$nomedome', sobrenome='$sebredome', login='$logindome',
+hierarquia='$tipodome', intropage='$intropagecheckdois' WHERE id=$iddogajo";
+$resultselwwq = $connectwwq->query($selecaowwq);
+ 
+
+
+
 
 endif;
 ?>
@@ -728,41 +961,91 @@ endif;
 	</section> 
 
 
-	<section class="conteudocriaruser">
+	<section class="conteudocriaruser"><form method="get">
 		<section class="caixaumcriar">
-			<input type="text" name="nomedohome" id="nomedohome" placeholder="Nome" /*value="nomereceffff"*/>
+			<input type="text" name="nomedohomenovo" id="nomedohomenovo" required placeholder="Nome" /*value="nomereceffff"*/>
 			
 		</section>
 		<section class="caixaumcriar">
-			<input type="text" name="nomedohome" id="nomedohome" placeholder="Sobrenome" /*value="nomereceffff"*/>
+			<input type="text" name="sobredohomenovo" id="sobredohomenovo" required placeholder="Sobrenome" /*value="nomereceffff"*/>
 			
 		</section>
 		<section class="caixaumcriar">
-			<input type="text" name="nomedohome" id="nomedohome" placeholder="Login" /*value="nomereceffff"*/>
+			<input type="text" name="logindohomenovo" id="logindohomenovo" required placeholder="Login" /*value="nomereceffff"*/>
 			
 		</section>
 		<section class="caixaumcriar">
-			<input type="password" name="nomedohome" id="nomedohome" placeholder="Password" /*value="nomereceffff"*/>
+			<input type="password" name="passdohomenovo" id="passdohomenovo" required placeholder="Password" /*value="nomereceffff"*/>
 			
 		</section>
 		
 		<section class="caixadoiscriar">
 		<a class="bazacriar">
- 					<input type="radio" id="radioum" name="tipodome" value="admin"> Administrador &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
- 					<input type="radio" id="radiodois" name="tipodome" value="padrao"> Utilizador Padrão</a>
+ 					<input type="radio" id="radioum" name="tipodomennovo" value="1"> Administrador &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ 					<input type="radio" id="radiodois" name="tipodomennovo" value="0" checked="checked"> Utilizador Padrão</a>
 		</section>	
 
 
 		<section class="caixadoiscriar">
-				<button type="submit" id="loginq" name="repor" onmouseover="this.id='loginqover'" onmouseout="this.id='loginq'">Submeter</button>
+				<button type="submit" id="loginq" name="criarnovo" onmouseover="this.id='loginqover'" onmouseout="this.id='loginq'">Submeter</button>
 		</section>
 	<section>
+</form>
 
 
 
 
 
+<?php
+// Conexão
+require_once 'db_connect.php';
 
+//error_reporting(0);
+
+if(isset($_GET['criarnovo'])):
+	//$iddogajo = $_GET['id'];
+	$nomedomenovo = $_GET['nomedohomenovo'];
+	$sebredomenovo = $_GET['sobredohomenovo'];
+	$logindomenovo = $_GET['logindohomenovo'];
+	$tipodomenovo = $_GET['tipodomennovo'];
+	$passdomenovo = $_GET['passdohomenovo'];
+	$passdomenovomd = MD5($passdomenovo);
+	/*debug_to_console( $intropagecheck );*/
+
+
+/*
+	$sqlupdt= "UPDATE usuarios SET nome='$nomedome', sobrenome='$sebredome', login='$logindome',
+	hierarquia='$tipodome', intropage='$intropagecheckdois' WHERE id=$iddogajo";
+
+	$resultadouma = mysqli_query($connect, $sqlupdt);
+*/
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwqajh = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqajh = "INSERT INTO `usuarios`(`nome`, `sobrenome`, `hierarquia`, `login`, `senha`, `intropage`) 
+VALUES ('$nomedomenovo','$sebredomenovo','$tipodomenovo','$logindomenovo','$passdomenovomd','1')";
+$resultselwwqajh = $connectwwqajh->query($selecaowwqajh);
+ 
+endif
+
+?> 
 
 
 
@@ -778,9 +1061,298 @@ endif;
 <!--     FIM DIV criiar USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--     DIV modificar USERS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="modificarusers" class="dia">
-	modificar users
-</div>
+	
+<section class="titbio">Alterar Password</section>
+<form method="get">
+<section class="alterarpasspriv">
+<section class="caixaaaa">
+<input type="password" name="passnovapriv" id="nomezonainp" placeholder="Password Nova" required>
+</section>
+<button type="submit" id="subzonas" name="subpassnovap" onmouseover="this.id='loginover'" onmouseout="this.id='login'">Submeter</button>
+</section>
 
+</form>
+
+
+
+<?php
+
+// Conexão
+require_once 'db_connect.php';
+
+
+// Botão enviar
+	if(isset($_GET['subpassnovap'])):
+	$passnovap = $_GET['passnovapriv'];
+	$senhanova = MD5($passnovap);
+	$getvalorp = $dados['id'];
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwqaaqzz = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqaaqzz = "UPDATE `usuarios` SET 'senha'= '$senhanova' WHERE 'id'='$getvalorp'";
+$resultselwwqaaqzz = $connectwwqaaqzz->query($selecaowwqaaqzz);
+
+endif;
+
+?>
+
+<section class="titbioq">Selecionar Zonas</section>
+<form method="get">
+<section class="boxmoduser">
+	
+<table style="width:90%" class="tabelazonasuse">
+  <tr>
+    <td>
+<?php
+
+// Check connection
+require_once 'db_connect.php';
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwr = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwr = "SELECT * FROM usuarios";
+$resultselwwr = $connectwwr->query($selecaowwr);
+if ($resultselwwr->num_rows > 0) {?>
+ 
+
+
+<select name="valorra">
+<?php
+
+ while($rowwwr = $resultselwwr->fetch_assoc()) {
+	?>
+
+
+  <option value="<?=$rowwwr["id"]?>">         <?=$rowwwr["nome"]?></option>
+
+
+  <?php
+}
+echo "</select>";
+} else { echo "0 results"; }
+?></td>
+    <td>
+<?php
+
+// Check connection
+require_once 'db_connect.php';
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwr = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwr = "SELECT * FROM zonas";
+$resultselwwr = $connectwwr->query($selecaowwr);
+if ($resultselwwr->num_rows > 0) {?>
+ 
+
+
+<select name="valorrb">
+<?php
+
+ while($rowwwr = $resultselwwr->fetch_assoc()) {
+	?>
+
+
+  <option value="<?=$rowwwr["id"]?>">         <?=$rowwwr["nome"]?></option>
+
+
+  <?php
+}
+echo "</select>";
+} else { echo "0 results"; }
+?></td> 
+    <td><button type="submit" id="subzonas" name="subzonasnq" onmouseover="this.id='loginover'" onmouseout="this.id='login'">Submeter</button></td>
+  </tr>
+
+</table>
+
+</section>
+</form>
+
+
+
+<?php
+
+// Conexão
+require_once 'db_connect.php';
+
+
+// Botão enviar
+	if(isset($_GET['subzonasnq'])):
+	$getvalora = $_GET['valorra'];
+	$getvalorb = $_GET['valorrb'];
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwqaaq = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqaaq = "INSERT INTO `userszonas`(`iduser`, `idzona`) VALUES ($getvalora,$getvalorb)";
+$resultselwwqaaq = $connectwwqaaq->query($selecaowwqaaq);
+
+endif;
+
+?>
+
+
+<section class="titbioss">Apagar Zona de Utilizador</section>
+<form method="get">
+<section class="quarenta">
+
+<?php
+
+// Check connection
+require_once 'db_connect.php';
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwr = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwr = "SELECT * FROM usuarios";
+$resultselwwr = $connectwwr->query($selecaowwr);
+if ($resultselwwr->num_rows > 0) {?>
+ 
+
+
+<select name="valorrc">
+<?php
+
+ while($rowwwr = $resultselwwr->fetch_assoc()) {
+	?>
+
+
+  <option value="<?=$rowwwr["id"]?>">         <?=$rowwwr["nome"]?></option>
+
+
+  <?php
+}
+echo "</select>";
+} else { echo "0 results"; }
+?>
+</section>
+
+<section class="quarenta">
+<button type="submit" id="apagarbot" name="apagarzonauserx" value="apagarzona" onmouseover="this.id='apagarbotover'" onmouseout="this.id='apagarbot'">Apagar Zona de Utilizador</button>
+</section>
+
+</form>
+<?php
+
+// Conexão
+require_once 'db_connect.php';
+
+
+// Botão enviar
+	if(isset($_GET['apagarzonauserx'])):
+	$getvalorc = $_GET['valorrc'];
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwqaaqc = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqaaqc = "DELETE FROM `userszonas` WHERE 'iduser' = '$getvalorc'";
+$resultselwwqaaqc = $connectwwqaaqc->query($selecaowwqaaqc);
+
+endif;
+
+?>
+
+
+</div>
 <!--     FIM DIV modificar USERS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--     DIV zonas de controlo ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="zonasdecontrolo" class="dia">
@@ -915,48 +1487,60 @@ echo "</section>";
 <section class="titbio">Criar Zona de Controlo</section>
 <section class="criarzonadecontrolo">
 	<form method="get">
+		<input type="hidden" name="q1check" value="0"/>
+		<input type="hidden" name="q2check" value="0"/>
+		<input type="hidden" name="q3check" value="0"/>
+		<input type="hidden" name="q4check" value="0"/>
+		<input type="hidden" name="salajantarcheck" value="0"/>
+		<input type="hidden" name="salaestarcheck" value="0"/>
+		<input type="hidden" name="cozinhacheck" value="0"/>
+		<input type="hidden" name="hallcheck" value="0"/>
+		<input type="hidden" name="wccheck" value="0"/>
+		<input type="hidden" name="roupeirocheck" value="0"/>
+		<input type="hidden" name="escritoriocheck" value="0"/>
+		<input type="hidden" name="salaarmascheck" value="0"/>
 	<section>
 	<table class="tabelacriarzona" >
   <tr>
-    <td colspan="2"><input type="text" name="nomezona" id="nomezonainp" placeholder="Nome da Zona" required></td>
+    <td colspan="2"><input type="text" name="nomezonanv" id="nomezonainp" placeholder="Nome da Zona" required></td>
   </tr>
   <tr>
-    <td><input type="checkbox" id="pgintrocheck" name="q1check"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="q1check" value="1"></td>
     <td>Quarto Principal</td>
   </tr>
   <tr>
-    <td><input type="checkbox" id="pgintrocheck" name="q2check"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="q2check" value="1"></td>
     <td>Quarto André</td>
   </tr>
   <tr>
-    <td><input type="checkbox" id="pgintrocheck" name="q3check" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="q3check" value="1"></td>
     <td>Quarto Diana</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="q4check" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="q4check" value="1"></td>
     <td>Quarto Hospedes</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="salajantarcheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="salajantarcheck" value="1"></td>
     <td>Sala de Jantar</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="salaestarcheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="salaestarcheck" value="1"></td>
     <td>Sala de Estar</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="cozinhacheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="cozinhacheck" value="1"></td>
     <td>Cozinha</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="hallcheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="hallcheck" value="1"></td>
     <td>Hall</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="wccheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="wccheck" value="1"></td>
     <td>WC</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="roupeirocheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="roupeirocheck" value="1"></td>
     <td>Roupeiro</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="escritoriocheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="escritoriocheck" value="1"></td>
     <td>Escritório</td>
   </tr>
-    <td><input type="checkbox" id="pgintrocheck" name="salaarmascheck" value="intropagecheck"></td>
+    <td><input type="checkbox" id="pgintrocheck" name="salaarmascheck" value="1"></td>
     <td>Sala de Armas</td>
   </tr>
   <tr>
@@ -970,59 +1554,170 @@ require_once 'db_connect.php';
 
 
 // Botão enviar
-	if(isset($_POST['subzonasn'])):
-	$nomezonanv = mysqli_escape_string($connect, $_GET['nomezona']);
-
-	$q1zonanv = mysqli_escape_string($connect, $_GET['q1check']);
-	console_log($nomezonanv);	
-	$q2zonanv = mysqli_escape_string($connect, $_GET['q2check']);
-	$q3zonanv = mysqli_escape_string($connect, $_GET['q3check']);
-	$q4zonanv = mysqli_escape_string($connect, $_GET['q4check']);
-	$salajantarzonanv = mysqli_escape_string($connect, $_GET['salajantarcheck']);
-	$salaestarzonanv = mysqli_escape_string($connect, $_GET['salaestarcheck']);
-	$cozinhazonanv = mysqli_escape_string($connect, $_GET['cozinhacheck']);
-	$hallzonanv = mysqli_escape_string($connect, $_GET['hallcheck']);
-	$wczonanv = mysqli_escape_string($connect, $_GET['wccheck']);
-	$roupeirozonanv = mysqli_escape_string($connect, $_GET['roupeirocheck']);
-	$escritoriozonanv = mysqli_escape_string($connect, $_GET['escritoriocheck']);
-	$salaarmaszonanv = mysqli_escape_string($connect, $_GET['salaarmascheck']);
+	if(isset($_GET['subzonasn'])):
+	$nomezonanva = $_GET['nomezonanv'];
+	$q1zonanv =  $_GET['q1check'];
+	$q2zonanv =  $_GET['q2check'];
+	$q3zonanv =  $_GET['q3check'];
+	$q4zonanv =  $_GET['q4check'];
+	$salajantarzonanv =  $_GET['salajantarcheck'];
+	$salaestarzonanv =  $_GET['salaestarcheck'];
+	$cozinhazonanv =  $_GET['cozinhacheck'];
+	$hallzonanv =  $_GET['hallcheck'];
+	$wczonanv =  $_GET['wccheck'];
+	$roupeirozonanv =  $_GET['roupeirocheck'];
+	$escritoriozonanv =  $_GET['escritoriocheck'];
+	$salaarmaszonanv =  $_GET['salaarmascheck'];
 
 
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
 
-/*
-		$sql = "SELECT login FROM usuarios WHERE login = '$login'";
-		$sql = "INSERT INTO `zonas`(`id`, `nome`, `q1`, `q2`, `q3`, `q4`, `salaestar`, `salajantar`, `cozinha`, `hall`, `roupeiro`, `salaarmas`, `wc`, `escritorio`) 
-		VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],[value-14])";
-		$resultado = mysqli_query($connect, $sql);
+$connectwwqaa = mysqli_connect($servername, $username, $password, $db_name);
 
-		if(mysqli_num_rows($resultado) > 0):
-		$senha = md5($senha);
-		$sql = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'";
-
-
-
-		$resultado = mysqli_query($connect, $sql);
-
-			if(mysqli_num_rows($resultado) == 1):
-				$dados = mysqli_fetch_array($resultado);
-				mysqli_close($connect);
-				$_SESSION['logado'] = true;
-				$_SESSION['id_usuario'] = $dados['id'];
-				header('Location: divisao.php');
-			else:
-				$erros[] = "<li> Usuário e senha não conferem </li>";
-			endif;
-
-		else:
-			$erros[] = "<li> Usuário inexistente </li>";
-		endif;
-
-	endif;
-*/
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
 endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqaa = "INSERT INTO `zonas`(`nome`, `q1`, `q2`, `q3`, `q4`, `salaestar`, `salajantar`, `cozinha`, `hall`, `roupeiro`, `salaarmas`, `wc`, `escritorio`) 
+VALUES ('$nomezonanva','$q1zonanv','$q2zonanv','$q3zonanv','$q4zonanv','$salaestarzonanv','$salajantarzonanv','$cozinhazonanv','$hallzonanv','$roupeirozonanv',
+'$salaarmaszonanv','$wczonanv','$escritoriozonanv')";
+$resultselwwqaa = $connectwwqaa->query($selecaowwqaa);
+
+endif;
+
 ?>
 </section>
+<section class="apagarzona">
+	
+<section class="titbio">Apagar Zona de Controlo</section>
 
+
+<section class="txtlistausers">
+		<p>
+		Aqui pode as zonas que criou para cada controlo dos utilizadores.</p>
+		<p>Basta selecionar e apagar!.</p>
+	</section> 
+
+
+<section class="listazonasss">
+<section class="bloko">
+
+
+<form method="get">
+
+<?php
+
+// Check connection
+require_once 'db_connect.php';
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwr = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwr = "SELECT * FROM zonas";
+$resultselwwr = $connectwwr->query($selecaowwr);
+if ($resultselwwr->num_rows > 0) {?>
+ 
+
+
+<select name="valorr">
+<?php
+
+ while($rowwwr = $resultselwwr->fetch_assoc()) {
+	?>
+
+
+  <option value="<?=$rowwwr["id"]?>">         <?=$rowwwr["nome"]?></option>
+
+
+  <?php
+}
+echo "</select>";
+} else { echo "0 results"; }
+?>
+
+
+</section>
+<section class="aplicarzona">
+<button type="submit" id="apagarbot" name="apagarzonex" value="apagarzona" onmouseover="this.id='apagarbotover'" onmouseout="this.id='apagarbot'">Apagar Zona</button>
+</section>
+</section>
+
+
+
+</form>
+
+
+<?php
+
+// Conexão
+require_once 'db_connect.php';
+
+
+// Botão enviar
+	if(isset($_GET['apagarzonex'])):
+	$getvalor = $_GET['valorr'];
+
+
+// Conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "smartconnect";
+
+$connectwwqaaq = mysqli_connect($servername, $username, $password, $db_name);
+
+if(mysqli_connect_error()):
+	echo "Falha na conexão: ".mysqli_connect_error();
+endif;
+
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+header('Location: index.php');
+endif;
+
+$selecaowwqaaq = "DELETE FROM `zonas` WHERE id=$getvalor";
+$resultselwwqaaq = $connectwwqaaq->query($selecaowwqaaq);
+
+endif;
+
+?>
+
+
+
+
+
+
+
+
+
+</section>
 
 </div>
 <!--     FIM DIV zonas de controlo --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -1101,10 +1796,10 @@ Seus passatempos mais comuns englobam se na programação e codificação web. D
 	</section>
 
 	<section class="txtpap">
-		<p class="ppap">A minha PAP é um sistema de automação e controlo pelo smartphone, na qual dei o nome SmartConnect,
-			no qual englobaSmart, de algo inovador, inteligente e Connect pela sua facilidade de conecção, para que possa 
+		<p class="ppap">A minha PAP é um sistema de automação e controlo da casa que se desenvolve atravéz de uma página web e controlo pelo smartphone, na qual dei o nome SmartConnect,
+			no qual engloba Smart, de algo inovador, inteligente e Connect pela sua facilidade de conecção, para que possa 
 			ser controlado.
-			Desde cedo que aprecia a área tecnológica e o seu desenvolvimento. <br><br>
+			<br><br>
 			Seu desporto, ciclismo, algo completamente fundamental na sua vida que pratica regularmente.
 Seus passatempos mais comuns englobam se na programação e codificação web. Diferencia-se da maioria da sociedade pelo facto de não apreciar ver séries ou filmes constantemente. Bastante pensativo quando a vontade lhe toca fazendo-o criar filosofias aleatórias. Constitui opinião formada em política, religião ciência e factos, e, completamente acessível para uma discussão amigável sobre pensamentos e factos aleatórios.
 <br><br>Gonçalo já planifica as suas ideias académicas e profissionais a algum tempo, planeia seguir em caminho a uma licenciatura de design, multimédia e programação na Universidade de Coimbra.
