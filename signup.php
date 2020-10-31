@@ -1,6 +1,6 @@
 <?php
 
-$pr1 = 1;
+//$pr1 = 1;
 
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
