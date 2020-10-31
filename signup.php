@@ -1,7 +1,5 @@
 <?php
 
-$pr1 = 1;
-
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
 $connect = mysql_connect('nome_do_servidor','nome_de_usuario','senha');
